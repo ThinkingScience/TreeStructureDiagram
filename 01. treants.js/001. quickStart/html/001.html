@@ -1,9 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<!--stylesheets-->
+		<link href="../css/Treant.css" rel="stylesheet" type="text/css" />
+		<!--javascript-->
+		<script src="../js/raphael.js"></script>
+		<script src="../js/Treant.js"></script>
 	</head>
+
 	<body>
+		<!--html-->
+		<div id="tree_one" style="width: 335px;height: 160px;"></div>
 	</body>
+
+	<script>
+		simple_chat_config = {
+			chart: {
+				container: '#tree_one'
+			},
+			nodeStructure: {
+				text: {
+					name: 'Parent node'
+				},
+				children: [{
+						text: {
+							name: 'first'
+						}
+					},
+					{
+						text: {
+							name: 'secend'
+						}
+					}
+				]
+			}
+		};
+		var my_chat = new Treant(simple_chat_config);
+	</script>
+
 </html>
